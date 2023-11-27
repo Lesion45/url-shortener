@@ -1,0 +1,7 @@
+env: "local" # options: local dev prod
+storage-path: "C:/Users/maus1/Desktop/url-shortener/storage/storage.db"
+
+http-server: 
+  address: "localhost:5000"
+  timeout: 10s
+  idle-timeout: 60s
