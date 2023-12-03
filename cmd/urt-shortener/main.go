@@ -28,7 +28,21 @@ func main() {
 		os.Exit(1)
 	}
 
-	_ = storage
+	err = storage.SaveURL("www.test.ru", "test")
+	if err != nil {
+		log.Error("failed to save url", err)
+	}
+
+	_, err = storage.GetURL("test")
+	if err != nil {
+		log.Error("failed to get url", err)
+	}
+
+	ok, err := storage.DeleteURL("test")
+	if err != nil {
+		log.Error("failed to get url", err)
+	}
+	fmt.Println(ok)
 
 	// TODO: router chi
 
