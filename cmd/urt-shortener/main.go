@@ -90,13 +90,3 @@ func setupLogger(env string) *slog.Logger {
 
 	return log
 }
-
-func countElInMassive(massive []string) int {
-	var count int
-	for _, v := range massive {
-		if v != "" {
-			count++
-		}
-	}
-	return count
-}
